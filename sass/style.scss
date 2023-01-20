@@ -1,0 +1,155 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    color:black;
+body{
+    height:100vh;
+    overflow: auto;
+}
+.container{
+    margin:0 2rem;
+    display:grid;
+    grid-template-columns: 16% 72% 12% ;
+    grid-template-rows: 85px  87vh;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 0;
+    grid-column: 1/4;
+    grid-row: 1/2;
+
+    .head-left{
+        display: flex;
+        align-items: center;
+        width:16%;
+
+        .fa-list{
+            margin-right: 2rem;
+            font-size: 1.2rem;
+        }
+        .fa-truck-front{
+            font-size: 1.4rem;
+            color:rgba(255, 1, 1, 1);
+            margin-right:0.2rem;
+        }
+        h1{
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            sup{
+                font-size: 0.5rem;
+            }
+        }
+    }
+    
+    .head-center{
+        display:flex;
+        width:50%;
+        height:44px;
+
+        .searchbox{
+            width:100%;
+            height:100%;
+            padding:0 2rem;
+            border-width:1px 0 1px 1px;
+            border-color: black transparent black black;
+            border-style: solid;
+            border-radius: 10vw  0  0 10vw ;
+            display: flex;
+            align-items: center;
+        }
+        input[type="search"]{
+            border: none;
+            width:100%;
+            height:100%;    
+        }
+        input[type="search"]:focus{
+            background-color: red;
+            border:none;
+        }
+        .search-icon{
+            display:flex;
+            border:1px solid black;
+            height:100%;
+            border-radius:0 10vw 10vw 0;
+            align-items: center;
+        }
+        .fa-magnifying-glass{
+            margin:1rem
+        }
+        a:nth-of-type(2){
+            display:flex;
+            align-items: center;
+            margin-left:1rem;
+
+            .fa-microphone{
+                font-size: 1.4rem;
+            }
+        }
+    }
+    
+    .head-right{
+        display:flex;
+        align-items: center;
+        width:12%;
+        justify-content: space-evenly;
+
+        .notifications{
+            position: relative;
+            display:block;
+
+            .notifications::before{
+                position: absolute;
+                top:0;
+                left:0;
+                background-color: red;
+                width:1rem;
+                height: 1rem;
+                content: 'nssss'; /* Olmadı */
+            }
+        }
+        .your-logo{
+            border:1px solid black;
+            border-radius: 50%;
+            width:3rem;
+            aspect-ratio: 1;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+nav{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    overflow-y: scroll;
+
+    a{
+        display:flex;
+        margin:1rem;
+    }
+}
+
+section{
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-color:aquamarine;
+
+    nav{
+        display:flex;
+        gap:1rem;
+
+        h4{
+            background-color: pink;
+            border-radius: 100vw;
+            padding:0.5rem 1rem;
+        }
+    }
+}

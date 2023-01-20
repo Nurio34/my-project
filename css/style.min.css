@@ -1,0 +1,146 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+* body {
+  height: 100vh;
+  overflow: auto;
+}
+* .container {
+  margin: 0 2rem;
+  display: grid;
+  grid-template-columns: 16% 72% 12%;
+  grid-template-rows: 85px 87vh;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+header .head-left {
+  display: flex;
+  align-items: center;
+  width: 16%;
+}
+header .head-left .fa-list {
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+header .head-left .fa-truck-front {
+  font-size: 1.4rem;
+  color: rgb(255, 1, 1);
+  margin-right: 0.2rem;
+}
+header .head-left h1 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+header .head-left h1 sup {
+  font-size: 0.5rem;
+}
+header .head-center {
+  display: flex;
+  width: 50%;
+  height: 44px;
+}
+header .head-center .searchbox {
+  width: 100%;
+  height: 100%;
+  padding: 0 2rem;
+  border-width: 1px 0 1px 1px;
+  border-color: black transparent black black;
+  border-style: solid;
+  border-radius: 10vw 0 0 10vw;
+  display: flex;
+  align-items: center;
+}
+header .head-center input[type=search] {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+header .head-center input[type=search]:focus {
+  background-color: red;
+  border: none;
+}
+header .head-center .search-icon {
+  display: flex;
+  border: 1px solid black;
+  height: 100%;
+  border-radius: 0 10vw 10vw 0;
+  align-items: center;
+}
+header .head-center .fa-magnifying-glass {
+  margin: 1rem;
+}
+header .head-center a:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+header .head-center a:nth-of-type(2) .fa-microphone {
+  font-size: 1.4rem;
+}
+header .head-right {
+  display: flex;
+  align-items: center;
+  width: 12%;
+  justify-content: space-evenly;
+}
+header .head-right .notifications {
+  position: relative;
+  display: block;
+}
+header .head-right .notifications .notifications::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 1rem;
+  height: 1rem;
+  content: "nssss"; /* Olmadı */
+}
+header .head-right .your-logo {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 3rem;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  overflow-y: scroll;
+}
+nav a {
+  display: flex;
+  margin: 1rem;
+}
+
+section {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  background-color: aquamarine;
+}
+section nav {
+  display: flex;
+  gap: 1rem;
+}
+section nav h4 {
+  background-color: pink;
+  border-radius: 100vw;
+  padding: 0.5rem 1rem;
+}/*# sourceMappingURL=style.min.css.map */
